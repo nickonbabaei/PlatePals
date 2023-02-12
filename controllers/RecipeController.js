@@ -28,7 +28,7 @@ const getRecipeById = async (req, res) => {
         }
         return res.send('Plant with the specified ID does not exists')
     } catch (error) {
-        return res.send(error.message);
+        return res.send(error.message)
     }
 }
 
@@ -37,7 +37,20 @@ const updateRecipe = async (req, res) => {
         const recipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, { new: true})
         res.json(recipe)
     } catch (error) {
-        return res.send(error.message);
+        return res.send(error.message)
+    }
+}
+
+const deleteRecipe = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deleted = await Recipe.findByIdAndDelete(id)
+        if (deleted) {
+            return res.send("Recipe deleted")
+        }
+        throw new Error("Recipe not found")
+    } catch (error) {
+        return res.send(error.message)
     }
 }
 
@@ -45,5 +58,7 @@ const updateRecipe = async (req, res) => {
 module.exports = {
     createRecipe,
     getAllRecipes,
-    getRecipeById
+    getRecipeById,
+    updateRecipe,
+    deleteRecipe
 }
