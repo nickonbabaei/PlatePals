@@ -3,6 +3,33 @@ body {
   padding: 0;
 }
 
+.card {
+  max-width: 400px;
+  max-height: 380px;
+  border-radius: 4px;
+  background-color: #03b6fc;
+  cursor: pointer;
+  
+}
+.card img {
+  width: 100%;
+  height: 200px;
+}
+.card .info-wrapper {
+  padding: 0.5em;
+}
+
+.card .img-wrapper {
+  width: auto;
+}
+
+.container-grid {
+  padding: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 1em;
+  justify-content:space-around;
+}
 
 .App {
   text-align: center;
@@ -13,6 +40,9 @@ a {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 18px;
   color: white;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
 }
 
 header {

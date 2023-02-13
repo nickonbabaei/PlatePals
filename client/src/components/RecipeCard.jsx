@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const RecipeCard = ({image, name, objectid}) => {
   
   return (
-    <Link to={ `/games/details/${objectid}`}>
+    <Link to={`/recipe/details/${objectid}`}>
     <div className="card recipe-card">
       <div className="img-wrapper">
         <img src={image} alt={image} />

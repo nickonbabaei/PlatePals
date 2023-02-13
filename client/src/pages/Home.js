@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+import RecipeCard from "../components/RecipeCard"
 
 
 const Home = () => {
-    const [recipes, setRecipes] = useState([])
+    const [food, setFood] = useState([])
     const getRecipes = async () => {
-        try {
-            let res = await axios.get('http://localhost:3001/api/recipes')
-            setRecipes(res.data.recipes)
-            
-        } catch (err) {
-            console.log(err);
-        }
+        const response = await axios.get('http://localhost:3001/api/recipes')
+        setFood(response.data.recipes)
         
     }
 
@@ -19,19 +15,21 @@ const Home = () => {
         getRecipes()
     }, [])
 
-    return recipes && (
+    return (
 
       <div className="home-page">
-        {console.log(recipes.recipes)}
-        {/* <h1>Recipes</h1>
-        {recipes.map((rec) => (
-            <div key={rec._id}>
-                <h3>name: {rec.name}</h3>
-
-
-            </div> 
-
-        ))} */}
+        
+        <h1>Recipes</h1>
+        <section className="container-grid">
+        {food.map((rec) => (
+            <RecipeCard 
+                key={rec._id}
+                objectid={rec._id}
+                name={rec.name}
+                image={rec.image}
+            />
+        ))} 
+        </section>
         
        
       </div>
