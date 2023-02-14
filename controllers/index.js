@@ -1,23 +1,26 @@
-const Ingredient = require('../models/ingredient')
+
 const Recipe = require('../models/recipe')
 
-const createIngredient = async (req, res) => {
-    try {
-    const ingredient = await new Ingredient(req.body)
-    await ingredient.save()
-    return res.json({ingredient})
-        } catch (error) {
-    return res.json({ error: error.message })
-}
-}
+// const createIngredient = async (req, res) => {
+//     try {
+//     const ingredient = await new Ingredient(req.body)
+//     await ingredient.save()
+//     return res.json({ingredient})
+//         } catch (error) {
+//     return res.json({ error: error.message })
+// }
+// }
 
 
 const createRecipe = async (req, res) => {
     try {
+        
         recipe = await new Recipe({
             name: req.body.name,
-            ingredients: req.body.ingredients,
-            instructions: req.body.instructions
+            ingredients: req.body.ingredients.split(','),
+            instructions: req.body.instructions,
+            category: req.body.category,
+            image: req.body.image
         })
         recipe.save()
         return res.json({recipe})
@@ -74,7 +77,6 @@ const deleteRecipe = async (req, res) => {
 
 
 module.exports = {
-    createIngredient,
     createRecipe,
     getAllRecipes,
     getRecipeById,

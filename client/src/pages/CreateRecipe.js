@@ -1,24 +1,19 @@
 import { useState } from "react"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 const CreateRecipe = () => {
-    
+    let navigate = useNavigate()
 
     const initialRecipeState = {
         name: '',
-        ingredients: [],
+        ingredients: '',
         instructions: '',
         category: '',
         image: ''
     }
 
-    const initialIngredientsState = {
-        measurement: '',
-        ingredient: ''
-    }
-
     const [recipeState, setRecipeState] = useState(initialRecipeState)
-    const [ingredientsState, setIngredientsState] = useState(initialIngredientsState)
 
     const handleRecipeChange = (evt) => {
         setRecipeState({... recipeState, [evt.target.id] : evt.target.value})
@@ -28,16 +23,8 @@ const CreateRecipe = () => {
         evt.preventDefault()
         await axios.post('http://localhost:3001/api/create-recipe', recipeState) 
         setRecipeState(initialRecipeState)
+        navigate('/')
     }
-
-    const handleIngredientsSubmit = async (evt) => {
-        evt.preventDefault()
-        
-
-
-    }
-
-
 
     return (
       <div className="create-recipe">
@@ -53,13 +40,22 @@ const CreateRecipe = () => {
 
             <label htmlFor="category">Category:</label>
             <select id="category" onChange={handleRecipeChange} value={recipeState.category}>
-                <option value="breakfast">Breakfast</option>                            
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-                <option value="snack">Snack</option>
+                <option value="63ebc0f1f3f976863fd609f4">Breakfast</option>                            
+                <option value="63ebc0f1f3f976863fd609f5">Lunch</option>
+                <option value="63ebc0f1f3f976863fd609f6">Dinner</option>
+                <option value="63ebc0f1f3f976863fd609f7">Snack</option>
             </select>
 
-            <label htmlFor="instructions">Instructions</label>
+            <label htmlFor="ingredients">Ingredients Seperated by Commas:</label>
+            <textarea
+            id="ingredients"
+            cols="30"
+            rows="10"
+            onChange={handleRecipeChange}
+            value={recipeState.ingredients}
+            ></textarea>
+
+            <label htmlFor="instructions">Instructions:</label>
             <textarea
             id="instructions"
             cols="30"
@@ -68,7 +64,7 @@ const CreateRecipe = () => {
             value={recipeState.instructions}
             ></textarea>
 
-            <button type="submit">Create recipe</button>
+            <button type="submit">Create Recipe</button>
         </form>
        
       </div>
