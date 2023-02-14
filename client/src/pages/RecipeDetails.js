@@ -10,7 +10,8 @@ const RecipeDetails = () => {
 
     const getRecipe = async () => {
         const response = await axios.get(`http://localhost:3001/api/read-recipe/${recipeID}`)
-        setDetails(response.data.recipe)
+        console.log(response.data)
+        setDetails(response.data)
     }
 
     useEffect(() => {
@@ -18,12 +19,27 @@ const RecipeDetails = () => {
     }, [recipeID])
 
 
-    return (
-      <div className="recipe-details">
-        {console.log(details)}
+    return details && (
         
-        
-
+        <div className="recipe-details">
+        <section className="image-container">
+          <div>
+            <img src={details.image} alt='' />
+          </div>
+        </section>
+        <section className="details">
+          <div className="flex-row space">
+            <h3>Name: {details.name}</h3>
+            <h3>Category: {details.category.name}</h3>
+            <h3>Ingredients: {details.ingredients.map((ing) => ing)}</h3>
+          </div>
+          <div>
+            <h3>
+            Instructions
+            </h3>
+            {details.instructions}
+          </div>
+        </section>
        
       </div>
     )

@@ -7,7 +7,7 @@ const Home = () => {
     const [food, setFood] = useState([])
     const getRecipes = async () => {
         const response = await axios.get('http://localhost:3001/api/recipes')
-        setFood(response.data.recipes)
+        setFood(response.data)
     }
 
     useEffect(() => {

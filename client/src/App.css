@@ -3,6 +3,37 @@ body {
   padding: 0;
 }
 
+.recipe-details .image-container {
+  width: 95vw;
+  margin: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1em 0;
+}
+
+.image-container div {
+  margin: auto;
+  width: 90%;
+}
+
+.image-container img {
+  margin: auto;
+  text-align: center;
+  width: 75%;
+  max-width: 75%;
+}
+
+.details {
+  width: 80%;
+  margin: auto;
+}
+
+.flex-row {
+  display: flex;
+}
+.space {
+  justify-content: space-between;
+}
+
 .card {
   max-width: 400px;
   max-height: 380px;

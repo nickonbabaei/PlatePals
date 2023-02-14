@@ -1,5 +1,6 @@
 
 const Recipe = require('../models/recipe')
+require('../models/category')
 
 // const createIngredient = async (req, res) => {
 //     try {
@@ -23,7 +24,7 @@ const createRecipe = async (req, res) => {
             image: req.body.image
         })
         recipe.save()
-        return res.json({recipe})
+        return res.json(recipe)
     } catch (err) {
         return res.json({err: err.message})
     }
@@ -32,7 +33,7 @@ const createRecipe = async (req, res) => {
 const getAllRecipes = async (req, res) => {
     try {
         const recipes = await Recipe.find()
-        return res.json({recipes})
+        return res.json(recipes)
     } catch(err) {
         res.send(err.message)
     }
@@ -42,12 +43,11 @@ const getRecipeById = async (req, res) => {
     try {
         const { id } = req.params
         const recipe = await Recipe.findById(id).populate('category')
-        if (recipe) {
-            return res.json({recipe})
-        }
-        return res.send('Recipe with the specified ID does not exists')
+        // await Recipe.findById(id).populate('category').then(recipe => {res.json(recipe)})
+        return res.json(recipe)
+        
     } catch (error) {
-        return res.send(error.message)
+        return res.send({msg: error.message, err: 'Recipe with the specified ID does not exists'})
     }
 }
 
