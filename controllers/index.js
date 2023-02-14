@@ -1,10 +1,26 @@
+const Ingredient = require('../models/ingredient')
 const Recipe = require('../models/recipe')
+
+const createIngredient = async (req, res) => {
+    try {
+    const ingredient = await new Ingredient(req.body)
+    await ingredient.save()
+    return res.json({ingredient})
+        } catch (error) {
+    return res.json({ error: error.message })
+}
+}
+
 
 const createRecipe = async (req, res) => {
     try {
-        const recipe = await new Recipe(req.body)
-        await recipe.save()
-        return res.json({plant})
+        recipe = await new Recipe({
+            name: req.body.name,
+            ingredients: req.body.ingredients,
+            instructions: req.body.instructions
+        })
+        recipe.save()
+        return res.json({recipe})
     } catch (err) {
         return res.json({err: err.message})
     }
@@ -26,7 +42,7 @@ const getRecipeById = async (req, res) => {
         if (recipe) {
             return res.json({recipe})
         }
-        return res.send('Plant with the specified ID does not exists')
+        return res.send('Recipe with the specified ID does not exists')
     } catch (error) {
         return res.send(error.message)
     }
@@ -55,7 +71,10 @@ const deleteRecipe = async (req, res) => {
 }
 
 
+
+
 module.exports = {
+    createIngredient,
     createRecipe,
     getAllRecipes,
     getRecipeById,

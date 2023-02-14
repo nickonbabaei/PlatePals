@@ -1,6 +1,10 @@
-const { Router } = require('express')
-const IngredientController = require('../controllers/IngredientController')
-const RecipeController = require('../controllers/RecipeController')
-const router = Router()
+const { Router } = require('express');
+const router = Router();
+const Controller = require('../controllers/')
 
 router.get('/', (req, res) => res.send('This is root!'))
+router.get('/recipes', Controller.getAllRecipes)
+router.post('/create-recipe', Controller.createRecipe)
+router.post('/create-ingredient', Controller.createRecipe)
+
+module.exports = router;
