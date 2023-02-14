@@ -43,7 +43,6 @@ const getRecipeById = async (req, res) => {
     try {
         const { id } = req.params
         const recipe = await Recipe.findById(id).populate('category')
-        // await Recipe.findById(id).populate('category').then(recipe => {res.json(recipe)})
         return res.json(recipe)
         
     } catch (error) {
@@ -53,7 +52,7 @@ const getRecipeById = async (req, res) => {
 
 const updateRecipe = async (req, res) => {
     try {
-        const recipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, { new: true})
+        const recipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, {new: true})
         res.json(recipe)
     } catch (error) {
         return res.send(error.message)

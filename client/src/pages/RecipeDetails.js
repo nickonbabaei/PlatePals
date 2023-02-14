@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const RecipeDetails = () => {
+    
+    let navigate = useNavigate()
 
     const [details, setDetails] = useState(null)
 
@@ -18,6 +20,14 @@ const RecipeDetails = () => {
         getRecipe()
     }, [recipeID])
 
+    const editButton = () => {
+        navigate('')
+    }
+
+    const deleteButton = () => {
+        await axios.delete()
+    }
+
 
     return details && (
         
@@ -31,7 +41,7 @@ const RecipeDetails = () => {
           <div className="flex-row space">
             <h3>Name: {details.name}</h3>
             <h3>Category: {details.category.name}</h3>
-            <h3>Ingredients: {details.ingredients.map((ing) => ing)}</h3>
+            <h3>Ingredients: {details.ingredients.map((ing) => ing)}, </h3>
           </div>
           <div>
             <h3>
@@ -40,6 +50,9 @@ const RecipeDetails = () => {
             {details.instructions}
           </div>
         </section>
+        <button className='edit-button' onClick={editButton}> </button>
+        <button className='delete-button' onClick={deleteButton}> </button>
+
        
       </div>
     )
