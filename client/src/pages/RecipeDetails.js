@@ -6,13 +6,22 @@ const RecipeDetails = () => {
 
     const [details, setDetails] = useState(null)
 
+    let {recipeID} = useParams()
+
     const getRecipe = async () => {
-        const response = await axios.get('http://localhost:3001/api/recipes')
-        setDetails(response.data.recipes)
+        const response = await axios.get(`http://localhost:3001/api/read-recipe/${recipeID}`)
+        setDetails(response.data.recipe)
     }
+
+    useEffect(() => {
+        getRecipe()
+    }, [recipeID])
+
 
     return (
       <div className="recipe-details">
+        {console.log(details)}
+        
         
 
        
