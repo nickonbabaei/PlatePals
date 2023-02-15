@@ -19,14 +19,15 @@ const RecipeDetails = () => {
         getRecipe()
     }, [recipeID])
 
-    const editButton = () => {
-        navigate('')
-    }
+    // const editButton = () => {
+    //     navigate('')
+    // }
 
-    const deleteButton = async () => {
+    const deleteButton = async (evt) => {
+        evt.preventDefault()
         const confirmation = window.confirm("You are about to delete this recipe, Click OK to confirm.")
         if (confirmation){
-            await axios.delete(`http://localhost:3001/api/delete-recipe/${recipeID}`)
+            axios.delete(`http://localhost:3001/api/delete-recipe/${recipeID}`)
             navigate('/')
         } else {
             return
