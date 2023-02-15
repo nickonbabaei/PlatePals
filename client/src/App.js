@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import CreateRecipe from './pages/CreateRecipe'
 import RecipeDetails from './pages/RecipeDetails'
+
 import axios from 'axios'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/recipe/create' element={<CreateRecipe />} />
           <Route path='/recipe/details/:recipeID' element={<RecipeDetails />} />
+          <Route path='/recipe/edit/:recipeID' element={<EditRecipe />} />
         </Routes>
       </main>
       

@@ -7,20 +7,20 @@ const Category = require('../models/category')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    const breakfast = await new Category({
-        name: 'Breakfast'
-    })
-    breakfast.save()
+    // const breakfast = await new Category({
+    //     name: 'Breakfast'
+    // })
+    // breakfast.save()
 
-    const lunch = await new Category({
-        name: 'Lunch'
-    })
-    lunch.save()
+    // const lunch = await new Category({
+    //     name: 'Lunch'
+    // })
+    // lunch.save()
 
-    const dinner = await new Category({
-        name: 'Dinner'
-    })
-    dinner.save()
+    // const dinner = await new Category({
+    //     name: 'Dinner'
+    // })
+    // dinner.save()
 
     const snack = await new Category({
         name: 'Snack'

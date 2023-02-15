@@ -2,16 +2,6 @@
 const Recipe = require('../models/recipe')
 require('../models/category')
 
-// const createIngredient = async (req, res) => {
-//     try {
-//     const ingredient = await new Ingredient(req.body)
-//     await ingredient.save()
-//     return res.json({ingredient})
-//         } catch (error) {
-//     return res.json({ error: error.message })
-// }
-// }
-
 
 const createRecipe = async (req, res) => {
     try {
