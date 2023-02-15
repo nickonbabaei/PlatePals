@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import CreateRecipe from './pages/CreateRecipe'
 import RecipeDetails from './pages/RecipeDetails'
+import EditRecipe from './pages/EditRecipe'
 
 import axios from 'axios'
 
