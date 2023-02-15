@@ -21,7 +21,7 @@ const CreateRecipe = () => {
 
     const handleRecipeSubmit = async (evt) => {
         evt.preventDefault()
-        await axios.post('http://localhost:3001/api/create-recipe', recipeState) 
+        await axios.post('/api/create-recipe', recipeState) 
         setRecipeState(initialRecipeState)
         navigate('/')
     }

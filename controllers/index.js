@@ -62,11 +62,7 @@ const updateRecipe = async (req, res) => {
 const deleteRecipe = async (req, res) => {
     try {
         const { id } = req.params;
-        const deleted = await Recipe.findByIdAndDelete(id)
-        if (deleted) {
-            return res.send("Recipe deleted")
-        }
-        throw new Error("Recipe not found")
+        await Recipe.findByIdAndDelete(id)
     } catch (error) {
         return res.send(error.message)
     }
