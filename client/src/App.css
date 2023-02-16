@@ -35,9 +35,11 @@ body {
 }
 
 .card {
-  max-width: 400px;
+  max-width: 500px;
   max-height: 380px;
   border-radius: 4px;
+  border-style: solid;
+  border-color: gray;
   background-color: #03b6fc;
   cursor: pointer;
   
@@ -48,7 +50,14 @@ body {
 }
 .card .info-wrapper {
   padding: 0.5em;
+
 }
+
+/* .card .info-wrapper h3{
+  padding: 0.5em;
+  color: blue;
+
+} */
 
 .card .img-wrapper {
   width: auto;
@@ -56,10 +65,12 @@ body {
 
 .container-grid {
   padding: 2em 0;
+  padding-left: 8em;
+  padding-right: 8em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
-  justify-content:space-around;
+  justify-content: center;
 }
 
 .App {
@@ -71,22 +82,29 @@ a {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 18px;
   color: white;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 2em;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  
 }
+
+
 
 header {
   background-color: #03b6fc;
   display: flex;
   justify-content:flex-end;
   align-items: center;
-  height: 2em;
+  height: 3em;
 }
 
 header nav a {
-  margin: 0 1em;
+  margin: 1em;
+  
 }
+
+
+
 
 .App-logo {
   height: 40vmin;

@@ -19,9 +19,9 @@ const RecipeDetails = () => {
         getRecipe()
     }, [recipeID])
 
-    // const editButton = () => {
-    //     navigate('')
-    // }
+    const editButton = () => {
+        navigate(`/recipe/edit/${recipeID}`)
+    }
 
     const deleteButton = async (evt) => {
         evt.preventDefault()
@@ -56,7 +56,7 @@ const RecipeDetails = () => {
             {details.instructions}
           </div>
         </section>
-        {/* <button className='edit-button' onClick={editButton}> </button> */}
+        <button className='edit-button' onClick={editButton}>Edit </button>
         <button className='delete-button' onClick={deleteButton}>Delete </button>
 
        

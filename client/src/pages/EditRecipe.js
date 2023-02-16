@@ -6,25 +6,29 @@ const EditRecipe = () => {
     let {recipeID} = useParams()
     let navigate = useNavigate()
 
+    const editRecipeState = {
+      name: '',
+      ingredients: '',
+      instructions: '',
+      category: '',
+      image: ''
+  }
+
     // const [recipeState, setRecipeState] = useState(editRecipeState)
-    const [recievedRecipe, setRecipe] = useState(null)
+    const [recievedRecipe, setRecipe] = useState(editRecipeState)
 
     const getRecipe = async () => {
       const response = await axios.get(`http://localhost:3001/api/read-recipe/${recipeID}`)
+      console.log('hello')
       setRecipe(response.data)
+      
     }
 
     useEffect(() => {
       getRecipe()
-    }, [recipeID])
+    }, [])
 
-    // const editRecipeState = {
-    //     name: '',
-    //     ingredients: '',
-    //     instructions: '',
-    //     category: '',
-    //     image: ''
-    // }
+    
 
     const handleRecipeChange = (evt) => {
         setRecipe({... recievedRecipe, [evt.target.id] : evt.target.value})
@@ -32,7 +36,7 @@ const EditRecipe = () => {
 
     const handleRecipeSubmit = async (evt) => {
         evt.preventDefault()
-        await axios.post('http://localhost:3001/api/edit-recipe', recipeState) 
+        await axios.put(`http://localhost:3001/api/edit-recipe/${recipeID}`, recievedRecipe) 
         // setRecipeState(editRecipeState)
         navigate('/')
     }
@@ -82,4 +86,4 @@ const EditRecipe = () => {
     )
   }
   
-  export default CreateRecipe
+  export default EditRecipe

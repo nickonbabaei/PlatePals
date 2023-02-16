@@ -42,7 +42,7 @@ const getRecipeById = async (req, res) => {
 
 const updateRecipe = async (req, res) => {
     try {
-        req.body.instructions = req.body.instructions.split(',')
+        // req.body.ingredients = req.body.ingredients.split(',')
         const recipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, {new: true})
         res.json(recipe)
     } catch (error) {

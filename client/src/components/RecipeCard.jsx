@@ -4,7 +4,7 @@ const RecipeCard = ({image, name, objectid}) => {
   
   return (
     <Link to={`/recipe/details/${objectid}`}>
-    <div className="card recipe-card">
+    <div className="card">
       <div className="img-wrapper">
         <img src={image} alt={image} />
       </div>

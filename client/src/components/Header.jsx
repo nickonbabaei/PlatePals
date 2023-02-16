@@ -4,11 +4,13 @@ const Header = () => {
 
   return (
     <header>
-      <nav>
+    <nav>
+        <h3>
         <Link to={'/'}>Home</Link>
         <Link to={'/recipe/create'}>Create Recipe</Link>
         <Link to={'/about'}>About</Link>
-      </nav>
+        </h3>
+    </nav>
     </header>
   )
 }
