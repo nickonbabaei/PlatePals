@@ -34,23 +34,26 @@ const CreateRecipe = () => {
                 <input
                     type="text"
                     id="name"
+                    placeholder="Required"
                     onChange={handleRecipeChange}
                     value={recipeState.name}
                 />
 
                 <label htmlFor="category">Category:</label>
                 <select id="category" onChange={handleRecipeChange} value={recipeState.category}>
+                    <option disabled>Select One (required):</option>
                     <option value="63ebc0f1f3f976863fd609f4">Breakfast</option>
                     <option value="63ebc0f1f3f976863fd609f5">Lunch</option>
                     <option value="63ebc0f1f3f976863fd609f6">Dinner</option>
                     <option value="63ebc0f1f3f976863fd609f7">Snack</option>
                 </select>
 
-                <label htmlFor="ingredients">Ingredients Seperated by Commas:</label>
+                <label htmlFor="ingredients">Ingredients:</label>
                 <textarea
                     id="ingredients"
                     cols="30"
                     rows="10"
+                    placeholder="Comma Seperated"
                     onChange={handleRecipeChange}
                     value={recipeState.ingredients}
                 ></textarea>
@@ -70,7 +73,7 @@ const CreateRecipe = () => {
                     id="image"
                     placeholder="Not Required"
                     onChange={handleRecipeChange}
-                    value={recievedRecipe.image}
+                    value={recipeState.image}
                 />
 
                 <button type="submit">Create Recipe</button>
