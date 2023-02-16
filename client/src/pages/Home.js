@@ -16,23 +16,33 @@ const Home = () => {
 
     return (
 
-      <div className="home-page">
-        
-        <h1>Recipes</h1>
-        <section className="container-grid">
-        {food.map((rec) => (
-            <RecipeCard 
-                key={rec._id}
-                objectid={rec._id}
-                name={rec.name}
-                image={rec.image}
-            />
-        ))} 
-        </section>
-        
-       
-      </div>
+        <div className="home-page">
+            <header className="home-header">
+                <div className="head">
+                    <div className="head-container">
+                        <div className="head-text">
+                            {/* <h1>Plate Pals</h1> */}
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+            <h1>Recipes</h1>
+            <section className="container-grid">
+                {food.map((rec) => (
+                    <RecipeCard
+                        key={rec._id}
+                        objectid={rec._id}
+                        name={rec.name}
+                        image={rec.image}
+                    />
+                ))}
+            </section>
+
+
+        </div>
     )
-  }
-  
-  export default Home
+}
+
+export default Home

@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  margin-left: 8em;
+  margin-right: 8em;
   padding: 0;
 }
 
@@ -11,7 +12,7 @@ body {
 }
 
 .image-container div {
-  margin: auto;
+  /* margin: auto; */
   width: 90%;
 }
 
@@ -65,8 +66,8 @@ body {
 
 .container-grid {
   padding: 2em 0;
-  padding-left: 8em;
-  padding-right: 8em;
+  /* margin-left: 8em;
+  margin-right: 8em; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
@@ -86,11 +87,12 @@ a {
   padding-right: 10px;
   padding-bottom: 20px;
   
+  
 }
 
 
 
-header {
+.main-header {
   background-color: #03b6fc;
   display: flex;
   justify-content:flex-end;
@@ -103,7 +105,19 @@ header nav a {
   
 }
 
+.head {
+  height: 30vh;
+  background: url(https://thumbs.dreamstime.com/b/mexican-taco-meat-beans-vegetables-black-stone-table-latin-american-food-long-banner-format-mexican-taco-meat-97685709.jpg) no-repeat;
+  background-size: 100%;
+  position: relative
+}
 
+.head
+
+.head-text{
+
+
+}
 
 
 .App-logo {

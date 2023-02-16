@@ -47,7 +47,7 @@ const RecipeDetails = () => {
           <div className="flex-row space">
             <h3>Name: {details.name}</h3>
             <h3>Category: {details.category.name}</h3>
-            <h3>Ingredients: {details.ingredients.map((ing) => ing)}, </h3>
+            <h3>Ingredients: {details.ingredients.map((ing) => ing)} </h3>
           </div>
           <div>
             <h3>
