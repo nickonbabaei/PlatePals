@@ -54,40 +54,23 @@ const RecipeDetails = () => {
             </div>
             <div className='details-info'>
                 <h1>{details.name}</h1>
-                <h4>{details.category.name}</h4>
+                <h3>{details.category.name}</h3>
             </div>
             <div className='ingredients'>
                 <h2>Ingredients</h2>
                 {details.ingredients.map((ing) => 
                 <p>{ing}<br/></p>)}
-                
             </div>
-            <button className='edit-button' onClick={editButton}>Edit </button>
-            <button className='delete-button' onClick={deleteButton}>Delete </button>
-
-           
+        
         </div>
+        <div className='instructions'>
+            <h2>Instructions</h2>
+            <p>{details.instructions}</p>
+        </div>
+        <button className='edit-button' onClick={editButton}>Edit </button>
+        <button className='delete-button' onClick={deleteButton}>Delete </button>
         </div>
 
-
-
-        //     <section className="details">
-        //       <div className="flex-row space">
-        //         <h3>Name: {details.name}</h3>
-        //         <h3>Category: {details.category.name}</h3>
-        //         <h3>Ingredients: {details.ingredients.map((ing) => ing)} </h3>
-        //       </div>
-        //       <div>
-        //         <h3>
-        //         Instructions
-        //         </h3>
-        //         {details.instructions}
-        //       </div>
-        //     </section>
-          
-
-
-        //   </main>
     )
 }
 
