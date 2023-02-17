@@ -23,7 +23,7 @@ const RecipeDetails = () => {
         navigate(`/recipe/edit/${recipeID}`)
     }
 
-    const deleteButton = async (evt) => {
+    const deleteButton = (evt) => {
         evt.preventDefault()
         const confirmation = window.confirm("You are about to delete this recipe, Click OK to confirm.")
         if (confirmation) {
