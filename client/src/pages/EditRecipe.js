@@ -41,6 +41,15 @@ const EditRecipe = () => {
 
   return (
     <div className="edit-recipe">
+      <header className="home-header">
+                <div className="head">
+                    <div className="head-container">
+                        <div className="head-text">
+                            <h1>Plate Pals</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
       <form onSubmit={handleRecipeSubmit}>
 
         <label htmlFor="name">Recipe Name:</label>
