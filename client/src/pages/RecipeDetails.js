@@ -54,18 +54,18 @@ const RecipeDetails = () => {
                 </div>
                 <div className='details-info'>
                     <h1>{details.name}</h1>
-                    <h3>{details.category.name}</h3>
+                    <h3>{details.category?.name}</h3>
                 </div>
                 <div className='ingredients'>
                     <h2>Ingredients</h2>
-                    {details.ingredients.map((ing) =>
+                    {details.ingredients?.map((ing) =>
                         <p>{ing}<br /></p>)}
                 </div>
 
             </div>
             <div className='instructions'>
                 <h2>Instructions</h2>
-                <p>{details.instructions}</p>
+                <p>{details?.instructions}</p>
             </div>
             <button className='edit-button' onClick={editButton}>Edit </button>
             <button className='delete-button' onClick={deleteButton}>Delete </button>
