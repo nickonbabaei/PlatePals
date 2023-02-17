@@ -17,7 +17,7 @@ const EditRecipe = () => {
   const [recievedRecipe, setRecipe] = useState(editRecipeState)
 
   const getRecipe = async () => {
-    const response = await axios.get(`http://localhost:3001/api/read-recipe/${recipeID}`)
+    const response = await axios.get(`/api/read-recipe/${recipeID}`)
     setRecipe(response.data)
     console.log(response.data.category);
 
@@ -35,7 +35,7 @@ const EditRecipe = () => {
 
   const handleRecipeSubmit = async (evt) => {
     evt.preventDefault()
-    await axios.put(`http://localhost:3001/api/edit-recipe/${recipeID}`, recievedRecipe)
+    await axios.put(`/api/edit-recipe/${recipeID}`, recievedRecipe)
     navigate('/')
   }
 

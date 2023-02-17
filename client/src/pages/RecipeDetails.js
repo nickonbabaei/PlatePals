@@ -11,7 +11,7 @@ const RecipeDetails = () => {
     let { recipeID } = useParams()
 
     const getRecipe = async () => {
-        const response = await axios.get(`http://localhost:3001/api/read-recipe/${recipeID}`)
+        const response = await axios.get(`/api/read-recipe/${recipeID}`)
         setDetails(response.data)
     }
 
@@ -27,7 +27,7 @@ const RecipeDetails = () => {
         evt.preventDefault()
         const confirmation = window.confirm("You are about to delete this recipe, Click OK to confirm.")
         if (confirmation) {
-            axios.delete(`http://localhost:3001/api/delete-recipe/${recipeID}`)
+            axios.delete(`/api/delete-recipe/${recipeID}`)
             navigate('/')
         } else {
             return
