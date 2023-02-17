@@ -50,6 +50,7 @@ const EditRecipe = () => {
                     </div>
                 </div>
             </header>
+        <h1>Edit Recipe</h1>
       <form onSubmit={handleRecipeSubmit}>
 
         <label htmlFor="name">Recipe Name:</label>

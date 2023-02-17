@@ -39,6 +39,7 @@ const CreateRecipe = () => {
                 </div>
 
             </header>
+            <h1>Create Recipe</h1>
             
             <form onSubmit={handleRecipeSubmit}>
 
