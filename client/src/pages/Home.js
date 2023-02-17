@@ -28,7 +28,7 @@ const Home = () => {
                 </div>
 
             </header>
-
+            <div className="entire-home">
             <h1>Your Recipes</h1>
             <section className="container-grid">
                 {food.map((rec) => (
@@ -41,7 +41,7 @@ const Home = () => {
                 ))}
             </section>
 
-
+            </div>
         </div>
     )
 }

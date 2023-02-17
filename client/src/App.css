@@ -5,6 +5,124 @@ body {
   background-image: url(https://static.vecteezy.com/system/resources/previews/002/375/040/original/modern-white-background-free-vector.jpg);
 }
 
+
+
+form {
+  font-weight: bold;
+  border-radius: 50px;
+  color: white;
+  background-color: #03b6fc;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-bottom: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+} 
+
+
+
+/* form {
+  background: white;
+  padding: 3em;
+  height: 500px;
+  border-radius: 10px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+}  */
+
+input {
+  background: white;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  /* border-left: 1px solid white;
+  border-top: 1px solid white; */
+  border-radius: 20px;
+  /* backdrop-filter: blur(5px); */
+  /* box-shadow: 4px 4px 60px rgba(0,0,0,0.2); */
+
+  /* font-weight: 500; */
+  /* transition: all 0.2s; */
+}
+
+textarea {
+  background: white;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  /* border-left: 1px solid white;
+  border-top: 1px solid white; */
+  border-radius: 20px;
+  /* backdrop-filter: blur(5px); */
+  /* box-shadow: 4px 4px 60px rgba(0,0,0,0.2); */
+  /* font-family: Montserrat, sans-serif;
+  font-weight: 500; */
+  /* transition: all 0.2s; */
+}
+
+select {
+  background: white;
+  width: 225px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  /* border-left: 1px solid white; */
+  /* border-top: 1px solid white; */
+  border-radius: 20px;
+  /* backdrop-filter: blur(5px); */
+  /* box-shadow: 4px 4px 60px rgba(0,0,0,0.2); */
+  /* font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s; */
+
+}
+
+textarea:hover {
+  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.4);
+}
+
+input:hover{
+  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.4);
+}
+
+select:hover{
+  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.4);
+}
+
+form button{
+  background: white;
+  width: 150px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  /* border-left: 1px solid white;
+  border-top: 1px solid white; */
+  border-radius: 50px;
+  /* backdrop-filter: blur(5px); */
+  /* box-shadow: 4px 4px 60px rgba(0,0,0,0.2); */
+  cursor: pointer;
+  /* font-family: Montserrat, sans-serif;
+  font-weight: 500; */
+  /* transition: all 0.2s; */
+
+}
+
+form button:hover{
+  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.4);
+}
+
+
+
 .details-info {
   font-size: 100%;
   text-align: center;
@@ -16,9 +134,17 @@ body {
  margin: 25px 100px 25px 25px;
  border-color: #03b6fc;
  background-color: #62d2fd;
- border-radius: 10px;
+ border-radius: 100px;
  font-size: 20px;
  cursor: pointer;
+}
+
+.edit-button:hover {
+  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.4);
+}
+
+.delete-button:hover {
+  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.4);
 }
 
 .delete-button {
@@ -26,17 +152,18 @@ body {
  color: white;
  border-color: #03b6fc;
  background-color: #62d2fd;
- border-radius: 10px;
+ border-radius: 100px;
  font-size: 20px;
  cursor: pointer;
 }
 
 .instructions {
+  box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
   border-width: 6px;
   border-style: solid;
   border-color: #03b6fc;
   background-color: #62d2fd;
-  border-radius: 10px;
+  border-radius: 50px;
   margin-top: 50px;
   margin-right: 16em;
   margin-left: 16em;
@@ -68,19 +195,20 @@ body {
 }
 
 .details-card img {
-  border-radius: 10px;
+  border-radius: 50px;
   width: 100%;
   height: 100%;
 }
 
 .details-card .ingredients {
+  box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
   margin-right: 4em;
   margin-left: 4em;
   border-width: 6px;
   border-style: solid;
   border-color: #03b6fc;
   background-color: #62d2fd;
-  border-radius: 10px;
+  border-radius: 50px;
   color: white;
 }
 
@@ -142,9 +270,13 @@ body {
   border-style: solid;
   border-color: gray;
   background-color: #03b6fc;
-  cursor: pointer;
-  
+  cursor: pointer; 
 }
+
+.card:hover {
+  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.4);
+}
+
 .card img {
   width: 100%;
   height: 250px;
