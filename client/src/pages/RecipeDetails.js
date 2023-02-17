@@ -36,6 +36,17 @@ const RecipeDetails = () => {
 
 
     return details && (
+        <div>
+        <header className="home-header">
+                <div className="head">
+                    <div className="head-container">
+                        <div className="head-text">
+                            <h1>Plate Pals</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
 
         <div className='details-card'>
             <div className='image'>
@@ -55,6 +66,7 @@ const RecipeDetails = () => {
             <button className='delete-button' onClick={deleteButton}>Delete </button>
 
            
+        </div>
         </div>
 
 
