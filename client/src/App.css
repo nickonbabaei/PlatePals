@@ -5,12 +5,30 @@ body {
   background-image: url(https://static.vecteezy.com/system/resources/previews/002/375/040/original/modern-white-background-free-vector.jpg);
 }
 
+.edit-button {
+ padding: 10px 30px;
+ color: white;
+ margin: 25px 100px 25px 25px;
+ border-color: #03b6fc;
+ background-color: #62d2fd;
+ border-radius: 10px;
+ font-size: 20px;
+}
+
+.delete-button {
+ padding: 10px 30px;
+ color: white;
+ border-color: #03b6fc;
+ background-color: #62d2fd;
+ border-radius: 10px;
+ font-size: 20px;
+}
+
 .instructions {
   border-width: 6px;
   border-style: solid;
   border-color: #03b6fc;
   background-color: #62d2fd;
-  
   border-radius: 10px;
   margin-top: 50px;
   margin-right: 16em;
@@ -19,6 +37,7 @@ body {
 
 .instructions h2{
   color: white;
+  text-decoration: underline;
 }
 
 .instructions p {
