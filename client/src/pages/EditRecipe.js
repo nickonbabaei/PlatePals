@@ -42,15 +42,15 @@ const EditRecipe = () => {
   return (
     <div className="edit-recipe">
       <header className="home-header">
-                <div className="head">
-                    <div className="head-container">
-                        <div className="head-text">
-                            <h1>Plate Pals</h1>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        <h1>Edit Recipe</h1>
+        <div className="head">
+          <div className="head-container">
+            <div className="head-text">
+              <h1>Plate Pals</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <h1>Edit Recipe</h1>
       <form onSubmit={handleRecipeSubmit}>
 
         <label htmlFor="name">Recipe Name:</label>

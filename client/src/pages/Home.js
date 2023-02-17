@@ -26,20 +26,19 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-
             </header>
             <div className="entire-home">
-            <h1>Your Recipes</h1>
-            <section className="container-grid">
-                {food.map((rec) => (
-                    <RecipeCard
-                        key={rec._id}
-                        objectid={rec._id}
-                        name={rec.name}
-                        image={rec.image}
-                    />
-                ))}
-            </section>
+                <h1>Your Recipes</h1>
+                <section className="container-grid">
+                    {food.map((rec) => (
+                        <RecipeCard
+                            key={rec._id}
+                            objectid={rec._id}
+                            name={rec.name}
+                            image={rec.image}
+                        />
+                    ))}
+                </section>
 
             </div>
         </div>

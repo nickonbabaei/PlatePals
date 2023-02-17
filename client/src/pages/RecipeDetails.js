@@ -37,7 +37,7 @@ const RecipeDetails = () => {
 
     return details && (
         <div>
-        <header className="home-header">
+            <header className="home-header">
                 <div className="head">
                     <div className="head-container">
                         <div className="head-text">
@@ -48,27 +48,27 @@ const RecipeDetails = () => {
 
             </header>
 
-        <div className='details-card'>
-            <div className='image'>
-                <img src={details.image} alt='' />
+            <div className='details-card'>
+                <div className='image'>
+                    <img src={details.image} alt='' />
+                </div>
+                <div className='details-info'>
+                    <h1>{details.name}</h1>
+                    <h3>{details.category.name}</h3>
+                </div>
+                <div className='ingredients'>
+                    <h2>Ingredients</h2>
+                    {details.ingredients.map((ing) =>
+                        <p>{ing}<br /></p>)}
+                </div>
+
             </div>
-            <div className='details-info'>
-                <h1>{details.name}</h1>
-                <h3>{details.category.name}</h3>
+            <div className='instructions'>
+                <h2>Instructions</h2>
+                <p>{details.instructions}</p>
             </div>
-            <div className='ingredients'>
-                <h2>Ingredients</h2>
-                {details.ingredients.map((ing) => 
-                <p>{ing}<br/></p>)}
-            </div>
-        
-        </div>
-        <div className='instructions'>
-            <h2>Instructions</h2>
-            <p>{details.instructions}</p>
-        </div>
-        <button className='edit-button' onClick={editButton}>Edit </button>
-        <button className='delete-button' onClick={deleteButton}>Delete </button>
+            <button className='edit-button' onClick={editButton}>Edit </button>
+            <button className='delete-button' onClick={deleteButton}>Delete </button>
         </div>
 
     )

@@ -20,7 +20,6 @@ body {
   text-align: center;
 }
 
-
 form {
   font-weight: bold;
   border-radius: 50px;
@@ -37,35 +36,13 @@ form {
   padding-bottom: 2em;
 } 
 
-
-
-/* form {
-  background: white;
-  padding: 3em;
-  height: 500px;
-  border-radius: 10px;
-  border-left: 1px solid white;
-  border-top: 1px solid white;
-  backdrop-filter: blur(10px);
-  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  text-align: center;
-  position: relative;
-}  */
-
 input {
   background: white;
   width: 200px;
   padding: 1em;
   margin-bottom: 2em;
   border: none;
-  /* border-left: 1px solid white;
-  border-top: 1px solid white; */
   border-radius: 20px;
-  /* backdrop-filter: blur(5px); */
-  /* box-shadow: 4px 4px 60px rgba(0,0,0,0.2); */
-
-  /* font-weight: 500; */
-  /* transition: all 0.2s; */
 }
 
 textarea {
@@ -74,14 +51,7 @@ textarea {
   padding: 1em;
   margin-bottom: 2em;
   border: none;
-  /* border-left: 1px solid white;
-  border-top: 1px solid white; */
   border-radius: 20px;
-  /* backdrop-filter: blur(5px); */
-  /* box-shadow: 4px 4px 60px rgba(0,0,0,0.2); */
-  /* font-family: Montserrat, sans-serif;
-  font-weight: 500; */
-  /* transition: all 0.2s; */
 }
 
 select {
@@ -90,15 +60,7 @@ select {
   padding: 1em;
   margin-bottom: 2em;
   border: none;
-  /* border-left: 1px solid white; */
-  /* border-top: 1px solid white; */
   border-radius: 20px;
-  /* backdrop-filter: blur(5px); */
-  /* box-shadow: 4px 4px 60px rgba(0,0,0,0.2); */
-  /* font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  transition: all 0.2s; */
-
 }
 
 textarea:hover {
@@ -119,23 +81,13 @@ form button{
   padding: 1em;
   margin-bottom: 2em;
   border: none;
-  /* border-left: 1px solid white;
-  border-top: 1px solid white; */
   border-radius: 50px;
-  /* backdrop-filter: blur(5px); */
-  /* box-shadow: 4px 4px 60px rgba(0,0,0,0.2); */
   cursor: pointer;
-  /* font-family: Montserrat, sans-serif;
-  font-weight: 500; */
-  /* transition: all 0.2s; */
-
 }
 
 form button:hover{
   box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.4);
 }
-
-
 
 .details-info {
   font-size: 100%;
@@ -248,13 +200,9 @@ form button:hover{
   display: flex;
   width: 100%;
   justify-content: space-between;
-  
-  /* margin: auto; */
-  
 }
 
 .image-container div {
-  /* margin: auto; */
   width: 90%;
 }
 
@@ -303,12 +251,6 @@ form button:hover{
   padding: 0.5em;
 }
 
-/* .card .info-wrapper h3{
-  padding: 0.5em;
-  color: blue;
-
-} */
-
 .card .img-wrapper {
   width: auto;
 }
@@ -332,19 +274,13 @@ a {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 18px;
   color: white;
-  /* padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px; */
 }
 
 a .card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  
 }
-
-
 
 .main-header {
   background-color: #03b6fc;
@@ -392,7 +328,6 @@ header nav a {
   font-size: 3em;
   font-family: 'Great Vibes', cursive;
 }
-
 
 .App-logo {
   height: 40vmin;
