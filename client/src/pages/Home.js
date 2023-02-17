@@ -22,14 +22,14 @@ const Home = () => {
                 <div className="head">
                     <div className="head-container">
                         <div className="head-text">
-                            {/* <h1>Plate Pals</h1> */}
+                            <h1>Plate Pals</h1>
                         </div>
                     </div>
                 </div>
 
             </header>
 
-            <h1>Recipes</h1>
+            <h1>Your Recipes</h1>
             <section className="container-grid">
                 {food.map((rec) => (
                     <RecipeCard

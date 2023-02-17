@@ -2,6 +2,7 @@ import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
+
 const CreateRecipe = () => {
     let navigate = useNavigate()
 
@@ -41,7 +42,7 @@ const CreateRecipe = () => {
 
                 <label htmlFor="category">Category:</label>
                 <select id="category" onChange={handleRecipeChange} value={recipeState.category}>
-                    <option disabled>Select One (required):</option>
+                    <option>Select One (required)</option>
                     <option value="63ebc0f1f3f976863fd609f4">Breakfast</option>
                     <option value="63ebc0f1f3f976863fd609f5">Lunch</option>
                     <option value="63ebc0f1f3f976863fd609f6">Dinner</option>

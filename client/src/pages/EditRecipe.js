@@ -14,7 +14,6 @@ const EditRecipe = () => {
     image: ''
   }
 
-  // const [recipeState, setRecipeState] = useState(editRecipeState)
   const [recievedRecipe, setRecipe] = useState(editRecipeState)
 
   const getRecipe = async () => {
@@ -37,7 +36,6 @@ const EditRecipe = () => {
   const handleRecipeSubmit = async (evt) => {
     evt.preventDefault()
     await axios.put(`http://localhost:3001/api/edit-recipe/${recipeID}`, recievedRecipe)
-    // setRecipeState(editRecipeState)
     navigate('/')
   }
 
