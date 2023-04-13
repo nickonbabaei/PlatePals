@@ -27,8 +27,6 @@ const EditRecipe = () => {
     getRecipe()
   }, [])
 
-
-
   const handleRecipeChange = (evt) => {
     setRecipe({ ...recievedRecipe, [evt.target.id]: evt.target.value })
   }

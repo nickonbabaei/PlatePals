@@ -8,7 +8,6 @@ import CreateRecipe from './pages/CreateRecipe'
 import RecipeDetails from './pages/RecipeDetails'
 import EditRecipe from './pages/EditRecipe'
 
-
 function App() {
 
   return (
@@ -23,7 +22,6 @@ function App() {
           <Route path='/recipe/edit/:recipeID' element={<EditRecipe />} />
         </Routes>
       </main>
-      
     </div>
   );
 }

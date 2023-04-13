@@ -92,7 +92,6 @@ const CreateRecipe = () => {
 
                 <button type="submit">Create Recipe</button>
             </form>
-
         </div>
     )
 }

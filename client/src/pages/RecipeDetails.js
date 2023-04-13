@@ -34,7 +34,6 @@ const RecipeDetails = () => {
         }
     }
 
-
     return details && (
         <div>
             <header className="home-header">
