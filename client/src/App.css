@@ -257,11 +257,13 @@ form button:hover{
 
 .container-grid {
   padding: 2em 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 7em;
-  grid-row-gap: 4em;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5em;
+  grid-row-gap: 4em; */
+  justify-content: space-between;
+  gap: 1rem;
   
 }
 
@@ -280,6 +282,7 @@ a .card {
   display: flex;
   flex-direction: column;
   width: 100%;
+  
 }
 
 .main-header {
