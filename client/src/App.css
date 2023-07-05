@@ -43,6 +43,10 @@ input {
   border-radius: 20px;
 }
 
+label {
+  color: white;
+}
+
 textarea {
   background: white;
   width: 200px;
