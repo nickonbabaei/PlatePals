@@ -35,17 +35,7 @@ const RecipeDetails = () => {
     }
 
     return details && (
-        <div>
-            <header className="home-header">
-                <div className="head">
-                    <div className="head-container">
-                        <div className="head-text">
-                            <h1>Plate Pals</h1>
-                        </div>
-                    </div>
-                </div>
-
-            </header>
+        <div className="mx-auto max-w-screen-2xl">
 
             <div className='details-card'>
                 <div className='image'>

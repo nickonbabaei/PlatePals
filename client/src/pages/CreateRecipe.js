@@ -29,16 +29,7 @@ const CreateRecipe = () => {
 
     return (
         <div className="max-w-screen-2xl mx-auto">
-            <header className="home-header">
-                <div className="head">
-                    <div className="head-container">
-                        <div className="head-text">
-                            <h1 className="sm:text-8xl text-7xl">Plate Pals</h1>
-                        </div>
-                    </div>
-                </div>
 
-            </header>
             <h1 className="text-2xl sm:text-4xl sm:py-8 py-4 font-medium">Create Recipe</h1>
 
             <form onSubmit={handleRecipeSubmit}>

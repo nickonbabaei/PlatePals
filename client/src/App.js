@@ -5,12 +5,14 @@ import Home from './pages/Home'
 import CreateRecipe from './pages/CreateRecipe'
 import RecipeDetails from './pages/RecipeDetails'
 import EditRecipe from './pages/EditRecipe'
+import Banner from './components/Banner';
 
 function App() {
 
   return (
     <div className="App">
       <Header />
+      <Banner />
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
