@@ -19,8 +19,6 @@ const EditRecipe = () => {
   const getRecipe = async () => {
     const response = await axios.get(`/api/read-recipe/${recipeID}`)
     setRecipe(response.data)
-    console.log(response.data.category);
-
   }
 
   useEffect(() => {

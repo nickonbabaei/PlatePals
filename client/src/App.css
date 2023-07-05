@@ -1,6 +1,4 @@
 body {
-  margin-left: 8em;
-  margin-right: 8em;
   padding: 0;
   background-image: url(https://static.vecteezy.com/system/resources/previews/002/375/040/original/modern-white-background-free-vector.jpg);
 }
@@ -228,7 +226,8 @@ form button:hover{
 
 .card {
   border-radius: 50px;
-  width: 100%;
+  max-width: 24rem;
+  min-width: 18rem;
   height: 350px;
   border-style: solid;
   border-color: gray;
@@ -291,6 +290,7 @@ a .card {
   justify-content:flex-end;
   align-items: center;
   height: 3em;
+  
 }
 
 header nav a {
@@ -328,7 +328,7 @@ header nav a {
 .head-text {
   text-align: center;
   color: white;
-  font-size: 3em;
+  font-size: 4em;
   font-family: 'Great Vibes', cursive;
 }
 
