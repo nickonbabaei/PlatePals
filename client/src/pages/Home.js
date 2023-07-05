@@ -20,12 +20,12 @@ const Home = () => {
                 <div className="head">
                     <div className="head-container">
                         <div className="head-text">
-                            <h1 className="text-8xl">Plate Pals</h1>
+                            <h1 className="sm:text-8xl text-7xl">Plate Pals</h1>
                         </div>
                     </div>
                 </div>
             </header>
-            <h1 className="text-4xl py-8 font-medium">Your Recipes</h1>
+            <h1 className="text-2xl sm:text-4xl sm:py-8 py-4 font-medium">Your Recipes</h1>
             <section className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 px-4">
                 {food.map((rec) => (
                     <RecipeCard
