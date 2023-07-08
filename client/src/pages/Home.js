@@ -15,9 +15,7 @@ const Home = () => {
 
     return (
         <div className="max-w-screen-2xl mx-auto">
-
-            <h1 className="text-2xl sm:text-4xl sm:py-8 py-4 font-medium">Your Recipes</h1>
-
+            <h1 className="text-2xl sm:text-4xl sm:py-8 py-4 font-medium">My Recipes</h1>
             <section className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 px-4">
                 {food.map((rec) => (
                     <RecipeCard
@@ -28,7 +26,6 @@ const Home = () => {
                     />
                 ))}
             </section>
-
         </div>
 
     )

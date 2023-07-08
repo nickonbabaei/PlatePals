@@ -14,7 +14,7 @@ const RecipeCard = ({ image, name, objectid }) => {
                     />
                 </div>
 
-                <div class="relative bg-sky-500 py-3 rounded-b-xl">
+                <div class="relative bg-sky-400 py-3 rounded-b-xl">
                     <h3
                         class="sm:text-lg text-sm text-gray-700"
                     >

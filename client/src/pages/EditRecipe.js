@@ -38,7 +38,7 @@ const EditRecipe = () => {
   return (
     <div className="mx-auto max-w-screen-2xl">
 
-      <h1 className="text-2xl sm:text-4xl sm:py-8 py-4 font-medium">Edit Recipe</h1>
+      <h1 className="text-4xl sm:py-8 py-4 font-medium">Edit Recipe</h1>
       <form onSubmit={handleRecipeSubmit}>
 
         <label htmlFor="name">Recipe Name:</label>
@@ -57,12 +57,13 @@ const EditRecipe = () => {
           <option value="63ebc0f1f3f976863fd609f7">Snack</option>
         </select>
 
-        <label htmlFor="ingredients">Ingredients Seperated by Commas:</label>
+        <label htmlFor="ingredients">Ingredients:</label>
         <textarea
           id="ingredients"
           cols="30"
           rows="10"
           onChange={handleRecipeChange}
+          placeholder="Required and comma seperated"
           value={recievedRecipe.ingredients}
         ></textarea>
 

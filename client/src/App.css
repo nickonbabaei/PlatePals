@@ -27,9 +27,9 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20%;
   margin-left: 20%;
-  margin-bottom: 1em;
+  margin-right: 20%;
+  margin-bottom: 2rem;
   padding-top: 2em;
   padding-bottom: 2em;
 } 
@@ -261,9 +261,6 @@ form button:hover{
   padding: 2em 0;
   display: flex;
   flex-wrap: wrap;
-  /* grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 5em;
-  grid-row-gap: 4em; */
   justify-content: space-between;
   gap: 1rem;
   
@@ -295,12 +292,6 @@ a .card {
   height: 3em;
 }
 
-@media only screen and (max-width: 639px) {
-  .main-header {
-    justify-content: center;
-  }
-}
-
 
 header nav a {
   text-decoration: none;
@@ -316,8 +307,6 @@ header nav a {
   background: url(https://thumbs.dreamstime.com/b/mexican-taco-meat-beans-vegetables-black-stone-table-latin-american-food-long-banner-format-mexican-taco-meat-97685709.jpg) no-repeat;
   background-size: cover;
   position: relative;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .head-container {
@@ -330,8 +319,6 @@ header nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .head-text {
@@ -344,12 +331,6 @@ header nav a {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -365,6 +346,17 @@ header nav a {
 
 .App-link {
   color: #61dafb;
+}
+
+@media only screen and (max-width: 639px) {
+  .main-header {
+    justify-content: center;
+  }
+
+  form {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 @keyframes App-logo-spin {

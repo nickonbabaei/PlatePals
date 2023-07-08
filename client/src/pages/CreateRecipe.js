@@ -30,11 +30,10 @@ const CreateRecipe = () => {
     return (
         <div className="max-w-screen-2xl mx-auto">
 
-            <h1 className="text-2xl sm:text-4xl sm:py-8 py-4 font-medium">Create Recipe</h1>
+            <h1 className="text-4xl sm:py-8 py-4 font-medium">Create Recipe</h1>
 
             <form onSubmit={handleRecipeSubmit}>
-
-                <label htmlFor="name">Recipe Name</label>
+                <label htmlFor="name">Recipe Name:</label>
                 <input
                     type="text"
                     id="name"
@@ -43,7 +42,7 @@ const CreateRecipe = () => {
                     value={recipeState.name}
                 />
 
-                <label htmlFor="category">Category</label>
+                <label htmlFor="category">Category:</label>
                 <select id="category" onChange={handleRecipeChange} value={recipeState.category}>
                     <option>Select One (Required)</option>
                     <option value="63ebc0f1f3f976863fd609f4">Breakfast</option>
@@ -52,17 +51,17 @@ const CreateRecipe = () => {
                     <option value="63ebc0f1f3f976863fd609f7">Snack</option>
                 </select>
 
-                <label htmlFor="ingredients">Ingredients</label>
+                <label htmlFor="ingredients">Ingredients:</label>
                 <textarea
                     id="ingredients"
                     cols="30"
                     rows="10"
-                    placeholder="Required and Comma Seperated"
+                    placeholder="Required and comma seperated"
                     onChange={handleRecipeChange}
                     value={recipeState.ingredients}
                 ></textarea>
 
-                <label htmlFor="instructions">Instructions</label>
+                <label htmlFor="instructions">Instructions:</label>
                 <textarea
                     id="instructions"
                     cols="30"
@@ -72,7 +71,7 @@ const CreateRecipe = () => {
                     value={recipeState.instructions}
                 ></textarea>
 
-                <label htmlFor="image">Image URL</label>
+                <label htmlFor="image">Image URL:</label>
                 <input
                     type="text"
                     id="image"
